@@ -2,16 +2,16 @@ import assert from 'assert';
 
 import { WebClient as SlackClient } from '@slack/web-api';
 
-import assertEnvProvided from './assertEnvProvided';
-import { clearPreviousInstances } from './clearPreviousInstances';
-import { createTagForInstance } from './createTagForInstance';
-import { ec2 } from './ec2';
-import getInstanceName from './getInstanceName';
-import { getPublicIpAddressOfInstance } from './getPublicIpAddressOfInstance';
-import { octokit, prInfo } from './octokit';
-import { runCommandOnEC2 } from './runCommandOnEC2';
-import { terminateInstance } from './terminateInstance';
-import { waitForInstanceReady } from './waitForInstanceReady';
+import assertEnvProvided from '../assertEnvProvided';
+import { clearPreviousInstances } from '../clearPreviousInstances';
+import { createTagForInstance } from '../createTagForInstance';
+import { ec2 } from '../ec2';
+import getInstanceName from '../getInstanceName';
+import { getPublicIpAddressOfInstance } from '../getPublicIpAddressOfInstance';
+import { octokit, prInfo } from '../octokit';
+import { runCommandOnEC2 } from '../runCommandOnEC2';
+import { terminateInstance } from '../terminateInstance';
+import { waitForInstanceReady } from '../waitForInstanceReady';
 
 const {
   PR_NUMBER = '',

@@ -7,6 +7,7 @@
   "repository": "https://github.com/hsh2001/ec2-preview-generator",
   "license": "MIT",
   "keywords": [],
+  "bin": "build/main/bin/main.js",
   "scripts": {
     "prestart": "npm run build",
     "start": "node build/main/index.js",

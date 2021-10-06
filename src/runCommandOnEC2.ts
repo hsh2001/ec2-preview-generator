@@ -33,8 +33,8 @@ export async function runCommandOnEC2(ipAddress: string): Promise<void> {
             [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  &&
             nvm install 14.17.5 && nvm use 14.17.5 &&
             node -v &&
-            git clone https://${process.env.GITHUB_TOKEN}@github.com/tcgwiz/tcgwiz.cardpara.kr.git &&
-            cd tcgwiz.cardpara.kr &&
+            git clone https://${process.env.GITHUB_TOKEN}@github.com/${process.env.GIT_OWNER}/${process.env.GIT_REPO}.git &&
+            cd ${process.env.GIT_REPO} &&
             git checkout ${process.env.GIT_REF} &&
             npm i && 
             sudo npm i -g pm2 &&

@@ -1,5 +1,5 @@
 import { ec2 } from './ec2';
-import { instanceName } from './main';
+import getInstanceName from './getInstanceName';
 
 export async function createTagForInstance(InstanceId: string | undefined) {
   if (InstanceId) {
@@ -8,7 +8,7 @@ export async function createTagForInstance(InstanceId: string | undefined) {
       Tags: [
         {
           Key: 'Name',
-          Value: instanceName,
+          Value: getInstanceName(+process.env.PR_NUMBER!),
         },
         {
           Key: 'PR_TARGET',
