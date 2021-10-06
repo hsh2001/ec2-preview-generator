@@ -1,11 +1,10 @@
 {
   "name": "ec2-preview-generator",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Build a test web server by automatically creating an AWS EC2 instance when labeled on PullRequest.",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
-  "module": "build/module/index.js",
-  "repository": "https://github.com/hsh2001/ts-template",
+  "repository": "https://github.com/hsh2001/ec2-preview-generator",
   "license": "MIT",
   "keywords": [],
   "scripts": {
@@ -19,6 +18,7 @@
   },
   "devDependencies": {
     "@types/node": "14.17.20",
+    "@types/ssh2": "0.5.48",
     "@typescript-eslint/eslint-plugin": "4.29.3",
     "@typescript-eslint/parser": "4.29.3",
     "eslint": "7.32.0",
@@ -31,5 +31,13 @@
   },
   "prettier": {
     "singleQuote": true
+  },
+  "dependencies": {
+    "@aws-sdk/client-ec2": "3.35.0",
+    "@octokit/rest": "18.11.4",
+    "@slack/web-api": "6.4.0",
+    "axios": "0.22.0",
+    "delay": "5.0.0",
+    "ssh2": "1.4.0"
   }
 }

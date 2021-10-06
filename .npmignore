@@ -1,0 +1,7 @@
+src/**
+.vscode/**
+.github/**
+.eslintrc.json
+.prettierignore
+tsconfig.json
+renovate.json
