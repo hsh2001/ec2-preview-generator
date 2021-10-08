@@ -1,5 +1,9 @@
 #!/usr/bin/env node
 
-if (process.argv.includes('init')) {
+const { argv } = process;
+
+if (argv.includes('init')) {
   import('./init');
+} else if (argv.includes('create')) {
+  import('../scripts/create');
 }
