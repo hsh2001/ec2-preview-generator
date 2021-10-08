@@ -87,8 +87,8 @@ const slack = SLACK_TOKEN && new SlackClient(SLACK_TOKEN);
     const ip = await getPublicIpAddressOfInstance(instance);
 
     assert(
-      typeof ip == 'string' &&
-        '생성한 인스턴스의 퍼블릭 IP 주소를 가져오는 데 실패했습니다.'
+      typeof ip == 'string',
+      '생성한 인스턴스의 퍼블릭 IP 주소를 가져오는 데 실패했습니다.'
     );
 
     await runCommandOnEC2(ip);
